@@ -3,75 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Abhijith K | Portfolio</title>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 :root{
 --primary:#1f2937;
 --accent:#3b82f6;
---bg:#f5f7fa;
+--bg:#f5f7fb;
 --card:#ffffff;
 }
 
 body{
-font-family: Arial, sans-serif;
+font-family:'Segoe UI',sans-serif;
 margin:0;
 background:var(--bg);
 color:#333;
+line-height:1.6;
 }
 
-section{
-padding:60px 10%;
-}
+/* HEADER */
 
-h2{
-text-align:center;
-margin-bottom:30px;
-}
-
-/* HERO */
-
-.hero{
+header{
 background:var(--primary);
 color:white;
 text-align:center;
 padding:80px 20px;
 }
 
-.hero h1{
-font-size:40px;
+header h1{
+font-size:42px;
 margin-bottom:10px;
 }
 
-.hero p{
+header p{
 font-size:18px;
 opacity:0.9;
 }
 
-/* SOCIAL */
+/* SOCIAL ICONS */
 
 .social{
 margin-top:20px;
 }
 
-.social img{
-width:35px;
-margin:10px;
+.social a{
+color:white;
+font-size:28px;
+margin:0 15px;
 transition:0.3s;
 }
 
-.social img:hover{
-transform:scale(1.2);
+.social a:hover{
+color:var(--accent);
+}
+
+/* SECTIONS */
+
+section{
+padding:70px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:28px;
 }
 
 /* ABOUT */
 
 .about{
-max-width:800px;
+max-width:750px;
 margin:auto;
 text-align:center;
-line-height:1.7;
+font-size:17px;
 }
 
 /* SKILLS */
@@ -80,14 +89,14 @@ line-height:1.7;
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:15px;
+gap:12px;
 }
 
 .skill{
 background:var(--card);
 padding:10px 18px;
 border-radius:30px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+box-shadow:0 3px 8px rgba(0,0,0,0.08);
 font-weight:500;
 }
 
@@ -99,20 +108,41 @@ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
-.project-card{
+.project{
 background:var(--card);
 padding:25px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.08);
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
 transition:0.3s;
 }
 
-.project-card:hover{
-transform:translateY(-5px);
+.project:hover{
+transform:translateY(-6px);
 }
 
-.project-card h3{
-color:var(--primary);
+.project h3{
+margin-top:0;
+color:#111827;
+}
+
+.tech{
+font-size:13px;
+color:#6b7280;
+margin-bottom:10px;
+}
+
+.buttons{
+margin-top:15px;
+}
+
+.buttons a{
+text-decoration:none;
+padding:8px 14px;
+border-radius:6px;
+font-size:14px;
+margin-right:10px;
+background:var(--accent);
+color:white;
 }
 
 /* CONTACT */
@@ -121,17 +151,13 @@ color:var(--primary);
 text-align:center;
 }
 
-.contact a{
-color:var(--accent);
-text-decoration:none;
-font-weight:bold;
-}
+/* FOOTER */
 
 footer{
+background:var(--primary);
+color:white;
 text-align:center;
 padding:20px;
-background:#e5e7eb;
-margin-top:40px;
 }
 
 </style>
@@ -139,53 +165,42 @@ margin-top:40px;
 
 <body>
 
-<!-- HERO -->
-
-<section class="hero">
+<header>
 
 <h1>Abhijith K</h1>
 
-<p>B.Tech Computer Science Engineer | Python & AI Developer</p>
+<p>Computer Science Engineer • Python Developer • AI Enthusiast</p>
 
 <div class="social">
 
 <a href="https://www.linkedin.com/in/abhijith-k-41a00326a/" target="_blank">
-<img src="LinkedIn.png">
+<i class="fab fa-linkedin"></i>
 </a>
 
 <a href="https://wa.me/917907528252" target="_blank">
-<img src="WhatsApp.png">
+<i class="fab fa-whatsapp"></i>
 </a>
 
 <a href="https://www.instagram.com/yourusername" target="_blank">
-<img src="Insta.jpg">
+<i class="fab fa-instagram"></i>
 </a>
 
 </div>
 
-</section>
-
-<!-- ABOUT -->
+</header>
 
 <section>
 
 <h2>About Me</h2>
 
-<div class="about">
-
-<p>
-I am a final year Computer Science Engineering student passionate about 
-Artificial Intelligence and software development. I enjoy building 
-real-world applications using Python, computer vision, and web 
-technologies. My goal is to develop scalable software solutions 
-and continuously learn new technologies.
+<p class="about">
+Final-year Computer Science Engineering student passionate about Artificial Intelligence,
+computer vision, and software development. I enjoy building intelligent applications
+using Python and developing solutions that combine machine learning with real-world
+problem solving.
 </p>
 
-</div>
-
 </section>
-
-<!-- SKILLS -->
 
 <section>
 
@@ -196,9 +211,10 @@ and continuously learn new technologies.
 <div class="skill">Python</div>
 <div class="skill">C</div>
 <div class="skill">Flask</div>
-<div class="skill">HTML & CSS</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
 <div class="skill">OpenCV</div>
-<div class="skill">CNN / RNN</div>
+<div class="skill">Deep Learning</div>
 <div class="skill">AWS</div>
 <div class="skill">Git</div>
 
@@ -206,44 +222,60 @@ and continuously learn new technologies.
 
 </section>
 
-<!-- PROJECTS -->
-
 <section>
 
 <h2>Projects</h2>
 
 <div class="projects">
 
-<div class="project-card">
+<div class="project">
+
+<p class="tech">Python • OpenCV • Computer Vision</p>
 
 <h3>AI Personal Gym Trainer</h3>
 
 <p>
-AI-powered fitness assistant that analyzes workout posture in real time
-using OpenCV and provides feedback to improve exercise safety and efficiency.
+A real-time AI fitness assistant that analyzes exercise posture using computer vision
+and provides corrective feedback to improve workout safety and efficiency.
 </p>
+
+<div class="buttons">
+<a href="#">GitHub</a>
+</div>
 
 </div>
 
-<div class="project-card">
+<div class="project">
+
+<p class="tech">Flask • Python • AWS</p>
 
 <h3>Air Pollution Monitoring Website</h3>
 
 <p>
-A Flask-based web application that displays real-time air quality data
-with cloud deployment using AWS for global accessibility.
+A web application that displays real-time air quality data and visualizes
+environmental conditions through a cloud-deployed system.
 </p>
+
+<div class="buttons">
+<a href="#">GitHub</a>
+</div>
 
 </div>
 
-<div class="project-card">
+<div class="project">
+
+<p class="tech">CNN • RNN • Deep Learning</p>
 
 <h3>Image Captioning System</h3>
 
 <p>
-Deep learning model that automatically generates descriptions for images
-using CNN and RNN architectures trained on the Flickr8k dataset.
+An AI model that generates textual descriptions for images using deep learning
+architectures trained on the Flickr8k dataset.
 </p>
+
+<div class="buttons">
+<a href="#">GitHub</a>
+</div>
 
 </div>
 
@@ -251,18 +283,16 @@ using CNN and RNN architectures trained on the Flickr8k dataset.
 
 </section>
 
-<!-- CONTACT -->
-
 <section class="contact">
 
 <h2>Contact</h2>
 
-<p>Email: <a href="mailto:abhi625025@gmail.com">abhi625025@gmail.com</a></p>
+<p>Email: <b>abhi625025@gmail.com</b></p>
 
-<p>Phone: 7907528252</p>
+<p>Phone: <b>+91 7907528252</b></p>
 
 <p>
-LinkedIn: 
+LinkedIn:
 <a href="https://www.linkedin.com/in/abhijith-k-41a00326a/" target="_blank">
 View Profile
 </a>

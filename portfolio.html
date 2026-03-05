@@ -3,42 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhijith K's Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS file for styles -->
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .skills, .languages, .interests {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Abhijith K</h1>
-        <p>Welcome to my professional portfolio.</p>
-    </header>
-    
-    <section id="resume">
-        <h2>Resume</h2>
-        <p>Details about Abhijith K's education, work experience, and achievements.</p>
-    </section>
-    
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><i class="icon-tech1"></i> Skill 1</li>
-            <li><i class="icon-tech2"></i> Skill 2</li>
-            <li><i class="icon-tech3"></i> Skill 3</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="project1_link">Project 1</a> - Description of project 1.</li>
-            <li><a href="project2_link">Project 2</a> - Description of project 2.</li>
-            <li><a href="project3_link">Project 3</a> - Description of project 3.</li>
-        </ul>
-    </section>
-
-    <footer>
-        <h2>Contact Information</h2>
-        <p>Email: <a href="mailto:abhijith@email.com">abhijith@email.com</a></p>
-        <p><i class="icon-phone"></i> Phone: (123) 456-7890</p>
-    </footer>
+    <div class="container">
+        <h1>My Professional Portfolio</h1>
+        <div class="section" id="summary">
+            <h2>Professional Summary</h2>
+            <p>Highly motivated and detail-oriented professional with experience in web development and design. Proficient in creating dynamic web applications and responsive websites.</p>
+        </div>
+        <div class="section" id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div><i class="fab fa-html5"></i> HTML</div>
+                <div><i class="fab fa-css3-alt"></i> CSS</div>
+                <div><i class="fab fa-js"></i> JavaScript</div>
+                <div><i class="fab fa-react"></i> React</div>
+                <div><i class="fab fa-node"></i> Node.js</div>
+            </div>
+        </div>
+        <div class="section" id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Project 1: Description of project 1.</li>
+                <li>Project 2: Description of project 2.</li>
+            </ul>
+        </div>
+        <div class="section" id="education">
+            <h2>Education</h2>
+            <p>Bachelor’s Degree in Computer Science from XYZ University.</p>
+        </div>
+        <div class="section" id="soft-skills">
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Communication</li>
+                <li>Teamwork</li>
+                <li>Problem Solving</li>
+            </ul>
+        </div>
+        <div class="section" id="languages">
+            <h2>Languages</h2>
+            <div class="languages">
+                <div><i class="fas fa-globe"></i> English</div>
+                <div><i class="fas fa-globe"></i> Spanish</div>
+            </div>
+        </div>
+        <div class="section" id="interests">
+            <h2>Interests</h2>
+            <div class="interests">
+                <div><i class="fas fa-hiking"></i> Hiking</div>
+                <div><i class="fas fa-book"></i> Reading</div>
+            </div>
+        </div>
+        <div class="section" id="contact">
+            <h2>Contact Information</h2>
+            <p>Email: myemail@example.com</p>
+            <p>LinkedIn: LinkedInProfile</p>
+        </div>
+    </div>
 </body>
 </html>

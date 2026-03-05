@@ -5,39 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhijith K | Portfolio</title>
     <style>
-        :root { --dark: #1a1a2e; --blue: #3498db; --orange: #e67e22; --light: #f4f7f6; }
-        * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); color: #333; line-height: 1.8; }
+        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; margin: 0; background-color: var(--bg); color: var(--text); line-height: 1.6; }
         
-        /* Hero Section */
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; text-align: center; padding: 20px; }
-        .hero h1 { font-size: 4rem; margin: 0; letter-spacing: -1px; }
-        .hero p { font-size: 1.5rem; color: var(--blue); margin: 10px 0 30px; }
+        /* Hero Section - Full Height */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); padding: 20px; }
+        .hero h1 { font-size: 4rem; margin: 0; background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.5rem; opacity: 0.8; margin: 10px 0 30px; }
         
-        /* Social Icons */
-        .social-links img { width: 50px; height: 50px; margin: 0 15px; background: white; border-radius: 50%; padding: 8px; transition: 0.3s; }
-        .social-links img:hover { transform: translateY(-10px); filter: brightness(1.1); }
+        /* Fixed Social Links Using Your Uploaded Images */
+        .social-icons { display: flex; gap: 25px; }
+        .social-icons img { width: 50px; height: 50px; border-radius: 12px; transition: 0.3s ease; background: white; padding: 5px; cursor: pointer; }
+        .social-icons img:hover { transform: translateY(-8px) scale(1.1); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); }
 
-        /* General Section Styling */
-        section { padding: 100px 10% 80px; max-width: 1200px; margin: 0 auto; }
-        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 50px; position: relative; }
-        h2::after { content: ''; width: 60px; height: 4px; background: var(--blue); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+        /* Long Scroll Section Styling */
+        section { min-height: 80vh; padding: 100px 10%; display: flex; flex-direction: column; align-items: center; }
+        h2 { font-size: 2.5rem; border-left: 5px solid var(--accent); padding-left: 15px; margin-bottom: 50px; width: 100%; max-width: 900px; }
 
-        /* Skill Grid */
-        .skill-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .skill-card { background: white; padding: 20px 40px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); font-weight: bold; color: var(--dark); border-bottom: 3px solid var(--blue); }
+        /* Skills Badges */
+        .skill-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 800px; }
+        .badge { background: var(--card); border: 1px solid #334155; padding: 12px 25px; border-radius: 50px; font-weight: 600; color: var(--accent); transition: 0.3s; }
+        .badge:hover { background: var(--accent); color: var(--bg); }
 
-        /* Project Showcase (Long Scroll) */
-        .project-detail { background: white; margin-bottom: 60px; border-radius: 20px; overflow: hidden; display: flex; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .project-text { padding: 50px; flex: 1; }
-        .project-tag { color: var(--orange); font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
-        .project-detail h3 { font-size: 2rem; margin: 10px 0; }
+        /* Large Project Cards for "Work Experience" feel */
+        .project-card { background: var(--card); width: 100%; max-width: 900px; padding: 40px; border-radius: 20px; margin-bottom: 40px; border: 1px solid #334155; position: relative; overflow: hidden; }
+        .project-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--accent); }
+        .project-tag { color: var(--accent); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+        .project-card h3 { font-size: 2rem; margin: 10px 0; }
         
-        /* Footer/Contact */
-        footer { background: var(--dark); color: white; text-align: center; padding: 50px; }
-        .email-link { color: var(--blue); text-decoration: none; font-size: 1.2rem; }
-
-        @media (max-width: 768px) { .project-detail { flex-direction: column; } .hero h1 { font-size: 2.5rem; } }
+        footer { padding: 50px; text-align: center; opacity: 0.6; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -45,59 +42,51 @@
     <div class="hero">
         <h1>Abhijith K</h1>
         <p>Computer Science Engineer | Python & AI Specialist</p>
-        <div class="social-links">
+        <div class="social-icons">
             <a href="https://www.linkedin.com/in/abhijith-k-41a00326a/" target="_blank"><img src="LinkedIn.png" alt="LinkedIn"></a>
             <a href="https://wa.me/917907528252" target="_blank"><img src="WhatsApp.png" alt="WhatsApp"></a>
             <a href="https://www.instagram.com/yourusername" target="_blank"><img src="Insta.jpg" alt="Instagram"></a>
         </div>
-        <p style="margin-top: 50px; font-size: 1rem; opacity: 0.7;">Scroll to explore projects</p>
+        <div style="margin-top: 60px; font-size: 0.9rem; animation: bounce 2s infinite;">SCROLL TO EXPLORE ↓</div>
     </div>
 
     <section>
-        <h2>Technical Expertise</h2>
-        <div class="skill-container">
-            <div class="skill-card">Python</div>
-            <div class="skill-card">C Programming</div>
-            <div class="skill-card">Flask Framework</div>
-            <div class="skill-card">AWS Deployment</div>
-            <div class="skill-card">OpenCV</div>
-            <div class="skill-card">CNN & RNN</div>
-            <div class="skill-card">Git Version Control</div>
+        <h2>Technical Arsenal</h2>
+        <div class="skill-grid">
+            <div class="badge">Python</div>
+            <div class="badge">Flask</div>
+            <div class="badge">OpenCV</div>
+            <div class="badge">CNN / RNN</div>
+            <div class="badge">AWS (Cloud)</div>
+            <div class="badge">Git / GitHub</div>
+            <div class="badge">C Programming</div>
         </div>
     </section>
 
     <section>
-        <h2>Work Experience</h2>
+        <h2>Work & Innovation</h2>
 
-        <div class="project-detail">
-            <div class="project-text">
-                <span class="project-tag">Computer Vision • AI</span>
-                <h3>AI Personal Gym Trainer</h3>
-                <p>Developed an AI-powered system that provides real-time posture analysis[cite: 18]. Using OpenCV and Python, this application identifies form errors to prevent injury and improve training efficiency[cite: 18].</p>
-            </div>
+        <div class="project-card">
+            <span class="project-tag">Artificial Intelligence • Computer Vision</span>
+            <h3>AI Personal Gym Trainer</h3>
+            <p>Developed a real-time posture analysis system using Python and OpenCV[cite: 18]. This project focuses on identifying exercise form errors to provide immediate feedback, effectively acting as a virtual coach[cite: 18].</p>
         </div>
 
-        <div class="project-detail">
-            <div class="project-text">
-                <span class="project-tag">Web Development • IoT</span>
-                <h3>Air Pollution Monitoring System</h3>
-                <p>Designed and deployed a real-time web application to track air quality[cite: 17]. Built with Flask and hosted on AWS, it handles live data streams for environmental monitoring[cite: 17].</p>
-            </div>
+        <div class="project-card">
+            <span class="project-tag">Cloud Infrastructure • IoT</span>
+            <h3>Air Quality Monitoring System</h3>
+            <p>Built a real-time environmental monitoring dashboard using Flask and Python, deployed on AWS for global accessibility[cite: 17]. This application tracks air quality data to provide live atmospheric updates[cite: 17].</p>
         </div>
 
-        <div class="project-detail">
-            <div class="project-text">
-                <span class="project-tag">Deep Learning • NLP</span>
-                <h3>Neural Image Captioning</h3>
-                <p>Created an AI system capable of generating descriptive text for images using the Flickr8k dataset[cite: 19]. The architecture combines CNNs for image feature extraction and RNNs for natural language generation[cite: 19].</p>
-            </div>
+        <div class="project-card">
+            <span class="project-tag">Deep Learning • NLP</span>
+            <h3>Neural Image Captioning</h3>
+            <p>An AI-based system designed with CNN and RNN architectures, trained on the Flickr8k dataset[cite: 19]. The model automatically generates descriptive textual captions for provided images[cite: 19].</p>
         </div>
     </section>
 
     <footer>
-        <p>Ready to collaborate on the next big thing?</p>
-        <a href="mailto:abhi625025@gmail.com" class="email-link">abhi625025@gmail.com</a>
-        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.5;">© 2026 Abhijith K. All Rights Reserved.</p>
+        <p>Created by Abhijith K • 2026</p>
     </footer>
 
 </body>

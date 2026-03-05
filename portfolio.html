@@ -3,89 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Abhijith K's Professional Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: #fff;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
-        .section {
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.1);
-        }
-        .skills, .languages, .interests {
-            display: flex;
-            justify-content: space-around;
-        }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: linear-gradient(to right, #4A90E2, #9013FE); color: white; padding: 20px; text-align: center; }
+        .container { width: 90%; margin: auto; overflow: hidden; }
+        h1, h2, h3 { margin: 0; }
+        h2 { border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        .projects, .skills, .education, .contact { margin: 20px 0; }
+        footer { text-align: center; padding: 10px; } 
+        @media (max-width: 600px) { .container { width: 100%; } }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Abhijith K</h1>
+        <h2>B.Tech Student</h2>
+    </header>
     <div class="container">
-        <h1>My Professional Portfolio</h1>
-        <div class="section" id="summary">
-            <h2>Professional Summary</h2>
-            <p>Highly motivated and detail-oriented professional with experience in web development and design. Proficient in creating dynamic web applications and responsive websites.</p>
-        </div>
-        <div class="section" id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills">
-                <div><i class="fab fa-html5"></i> HTML</div>
-                <div><i class="fab fa-css3-alt"></i> CSS</div>
-                <div><i class="fab fa-js"></i> JavaScript</div>
-                <div><i class="fab fa-react"></i> React</div>
-                <div><i class="fab fa-node"></i> Node.js</div>
-            </div>
-        </div>
-        <div class="section" id="projects">
+        <section class="projects">
             <h2>Projects</h2>
             <ul>
-                <li>Project 1: Description of project 1.</li>
-                <li>Project 2: Description of project 2.</li>
+                <li>Air Pollution Monitoring</li>
+                <li>AI Gym Trainer</li>
+                <li>Image Captioning</li>
             </ul>
-        </div>
-        <div class="section" id="education">
-            <h2>Education</h2>
-            <p>Bachelor’s Degree in Computer Science from XYZ University.</p>
-        </div>
-        <div class="section" id="soft-skills">
-            <h2>Soft Skills</h2>
+        </section>
+        <section class="skills">
+            <h2>Skills</h2>
             <ul>
-                <li>Communication</li>
-                <li>Teamwork</li>
-                <li>Problem Solving</li>
+                <li>Python</li>
+                <li>C</li>
+                <li>Flask</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Git</li>
+                <li>AWS</li>
+                <li>OpenCV</li>
             </ul>
-        </div>
-        <div class="section" id="languages">
-            <h2>Languages</h2>
-            <div class="languages">
-                <div><i class="fas fa-globe"></i> English</div>
-                <div><i class="fas fa-globe"></i> Spanish</div>
-            </div>
-        </div>
-        <div class="section" id="interests">
-            <h2>Interests</h2>
-            <div class="interests">
-                <div><i class="fas fa-hiking"></i> Hiking</div>
-                <div><i class="fas fa-book"></i> Reading</div>
-            </div>
-        </div>
-        <div class="section" id="contact">
+        </section>
+        <section class="education">
+            <h2>Education</h2>
+            <p>B.Tech in Computer Science</p>
+        </section>
+        <section class="contact">
             <h2>Contact Information</h2>
-            <p>Email: myemail@example.com</p>
-            <p>LinkedIn: LinkedInProfile</p>
-        </div>
+            <p>Email: abhi625025@gmail.com</p>
+            <p>Phone: +91 7907528252</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/abhijith-k-41a00326a/">Profile</a></p>
+            <p>Instagram: <a href="https://instagram.com/aqua_625">@aqua_625</a></p>
+        </section>
     </div>
+    <footer>
+        <p>&copy; 2026 Abhijith K. All rights reserved.</p>
+    </footer>
 </body>
 </html>

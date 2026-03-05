@@ -5,65 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhijith K | Portfolio</title>
     <style>
-        :root { --primary: #2c3e50; --accent: #3498db; --text: #333; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); max-width: 900px; margin: auto; padding: 20px; background-color: #f8f9fa; }
+        :root { --dark: #1a1a2e; --blue: #3498db; --orange: #e67e22; --light: #f4f7f6; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); color: #333; line-height: 1.8; }
         
-        /* Header & Brand */
-        header { text-align: center; padding: 60px 20px; background: var(--primary); color: white; border-radius: 15px; margin-bottom: 30px; }
-        .social-links { margin-top: 25px; display: flex; justify-content: center; gap: 25px; }
-        .social-links img { width: 45px; height: 45px; transition: 0.3s; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
-        .social-links img:hover { transform: translateY(-5px); }
+        /* Hero Section */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; text-align: center; padding: 20px; }
+        .hero h1 { font-size: 4rem; margin: 0; letter-spacing: -1px; }
+        .hero p { font-size: 1.5rem; color: var(--blue); margin: 10px 0 30px; }
+        
+        /* Social Icons */
+        .social-links img { width: 50px; height: 50px; margin: 0 15px; background: white; border-radius: 50%; padding: 8px; transition: 0.3s; }
+        .social-links img:hover { transform: translateY(-10px); filter: brightness(1.1); }
 
-        /* Project Cards (Different from Resume Style) */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 25px; border-radius: 12px; border-left: 5px solid var(--accent); shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .card h3 { margin-top: 0; color: var(--primary); }
-        .tech-stack { font-size: 0.85rem; color: #666; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        /* General Section Styling */
+        section { padding: 100px 10% 80px; max-width: 1200px; margin: 0 auto; }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 50px; position: relative; }
+        h2::after { content: ''; width: 60px; height: 4px; background: var(--blue); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+        /* Skill Grid */
+        .skill-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .skill-card { background: white; padding: 20px 40px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); font-weight: bold; color: var(--dark); border-bottom: 3px solid var(--blue); }
+
+        /* Project Showcase (Long Scroll) */
+        .project-detail { background: white; margin-bottom: 60px; border-radius: 20px; overflow: hidden; display: flex; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .project-text { padding: 50px; flex: 1; }
+        .project-tag { color: var(--orange); font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        .project-detail h3 { font-size: 2rem; margin: 10px 0; }
         
-        /* Skills Bar */
-        .skills-section { text-align: center; padding: 40px 0; }
-        .badge { display: inline-block; background: #e9ecef; padding: 8px 16px; border-radius: 50px; margin: 5px; font-weight: 500; }
+        /* Footer/Contact */
+        footer { background: var(--dark); color: white; text-align: center; padding: 50px; }
+        .email-link { color: var(--blue); text-decoration: none; font-size: 1.2rem; }
+
+        @media (max-width: 768px) { .project-detail { flex-direction: column; } .hero h1 { font-size: 2.5rem; } }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Abhijith K</h1>
-    <p>Computer Science Engineer | Python & AI Specialist</p>
-    <div class="social-links">
-        <a href="https://www.linkedin.com/in/abhijith-k-41a00326a/" target="_blank"><img src="LinkedIn.png" alt="LinkedIn"></a>
-        <a href="https://wa.me/917907528252" target="_blank"><img src="WhatsApp.png" alt="WhatsApp"></a>
-        <a href="https://www.instagram.com/yourusername" target="_blank"><img src="Insta.jpg" alt="Instagram"></a>
-    </div>
-</header>
-
-<section class="skills-section">
-    <div class="badge">Python</div>
-    <div class="badge">Flask</div>
-    <div class="badge">OpenCV</div>
-    <div class="badge">CNN/RNN</div>
-    <div class="badge">AWS Deployment</div>
-</section>
-
-<div class="project-grid">
-    <div class="card">
-        <p class="tech-stack">Computer Vision • OpenCV</p>
-        <h3>AI Personal Gym Trainer</h3>
-        <p>A real-time system analyzing posture to ensure workout efficiency and safety[cite: 18].</p>
+    <div class="hero">
+        <h1>Abhijith K</h1>
+        <p>Computer Science Engineer | Python & AI Specialist</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/abhijith-k-41a00326a/" target="_blank"><img src="LinkedIn.png" alt="LinkedIn"></a>
+            <a href="https://wa.me/917907528252" target="_blank"><img src="WhatsApp.png" alt="WhatsApp"></a>
+            <a href="https://www.instagram.com/yourusername" target="_blank"><img src="Insta.jpg" alt="Instagram"></a>
+        </div>
+        <p style="margin-top: 50px; font-size: 1rem; opacity: 0.7;">Scroll to explore projects</p>
     </div>
 
-    <div class="card">
-        <p class="tech-stack">Flask • Cloud • AWS</p>
-        <h3>Air Quality Monitor</h3>
-        <p>Live environmental data visualization deployed globally via AWS infrastructure[cite: 17].</p>
-    </div>
+    <section>
+        <h2>Technical Expertise</h2>
+        <div class="skill-container">
+            <div class="skill-card">Python</div>
+            <div class="skill-card">C Programming</div>
+            <div class="skill-card">Flask Framework</div>
+            <div class="skill-card">AWS Deployment</div>
+            <div class="skill-card">OpenCV</div>
+            <div class="skill-card">CNN & RNN</div>
+            <div class="skill-card">Git Version Control</div>
+        </div>
+    </section>
 
-    <div class="card">
-        <p class="tech-stack">Deep Learning • Flickr8k</p>
-        <h3>Image Captioning</h3>
-        <p>Automated descriptive text generation using neural network architectures[cite: 19].</p>
-    </div>
-</div>
+    <section>
+        <h2>Work Experience</h2>
+
+        <div class="project-detail">
+            <div class="project-text">
+                <span class="project-tag">Computer Vision • AI</span>
+                <h3>AI Personal Gym Trainer</h3>
+                <p>Developed an AI-powered system that provides real-time posture analysis[cite: 18]. Using OpenCV and Python, this application identifies form errors to prevent injury and improve training efficiency[cite: 18].</p>
+            </div>
+        </div>
+
+        <div class="project-detail">
+            <div class="project-text">
+                <span class="project-tag">Web Development • IoT</span>
+                <h3>Air Pollution Monitoring System</h3>
+                <p>Designed and deployed a real-time web application to track air quality[cite: 17]. Built with Flask and hosted on AWS, it handles live data streams for environmental monitoring[cite: 17].</p>
+            </div>
+        </div>
+
+        <div class="project-detail">
+            <div class="project-text">
+                <span class="project-tag">Deep Learning • NLP</span>
+                <h3>Neural Image Captioning</h3>
+                <p>Created an AI system capable of generating descriptive text for images using the Flickr8k dataset[cite: 19]. The architecture combines CNNs for image feature extraction and RNNs for natural language generation[cite: 19].</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Ready to collaborate on the next big thing?</p>
+        <a href="mailto:abhi625025@gmail.com" class="email-link">abhi625025@gmail.com</a>
+        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.5;">© 2026 Abhijith K. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
